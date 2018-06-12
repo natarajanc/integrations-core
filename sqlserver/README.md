@@ -41,6 +41,8 @@ Make sure that your SQL Server instance supports SQL Server authentication by en
 
     See the [example check configuration][2] for a comprehensive description of all options, including how to use custom queries to create your own metrics.
 
+    **Note**: The (default) provider `SQLOLEDB` is being deprecated. To use the newer `MSOLEDBSQL` provider, set the `adoprovider` variable to `MSOLEDBSQL` in your `sqlserver.d/conf.yaml` file after having downloaded the new provider from [Microsoft][8].
+
 3. [Restart the Agent][3] to start sending SQL Server metrics to Datadog.
 
 ### Validation
@@ -78,3 +80,4 @@ Need help? Contact [Datadog Support][6].
 [5]: https://github.com/DataDog/integrations-core/blob/master/sqlserver/metadata.csv
 [6]: http://docs.datadoghq.com/help/
 [7]: https://www.datadoghq.com/blog/monitor-azure-sql-databases-datadog/
+[8]: https://docs.microsoft.com/en-us/sql/connect/oledb/oledb-driver-for-sql-server?view=sql-server-2017 
